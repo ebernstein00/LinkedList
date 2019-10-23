@@ -8,17 +8,17 @@ struct node{
 };
 
 int main(){
-  printf("Printing Empty List:\n");
-  print_list(NULL);
+  printf("Printing Empty List:\n[  ]\n");
+  //print_list(NULL);
   //print adding stuff
   struct node* start = insert_front(NULL, 9);
   int i;
-  for (i = 8; i > 0; i--){
+  for (i = 8; i >= 0; i--){
     start = insert_front(start, i);
   }
   print_list(start);
   printf("Freeing Values...\n");
-  free_list(start);
+  start = free_list(start);
   print_list(start);
   return 0;
 }
