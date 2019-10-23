@@ -11,18 +11,25 @@ void print_list(struct node* node){
   while(node->next != NULL){
     printf("%d ", node->i);
   }
+  printf("]");
 }
 
 struct node * insert_front(struct node* node, int x){
   struct node front;
-  front->i = x;
-  front->next = node;
   struct node* ptr = &front;
+  ptr->i = x;
+  ptr->next = node;
   return ptr;
 }
 
 struct node * free_list(struct node* node){
   struct node* ph = node->next;
-  free(node);
+  while (ph != NULL){
+    free(node);
+    ph = ph->next;
+  }
+  return ph;
+  /*free(node);
   free_list(ph);
+  return ph;*/
 }
