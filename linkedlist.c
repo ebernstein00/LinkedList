@@ -9,7 +9,7 @@ struct node{
 void print_list(struct node* node){
   if (node == NULL){
     printf("[  ]\n");
-    break;
+    return;
   }
   printf("Printing List:\n[ ");
   while(node->next != NULL){
