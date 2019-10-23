@@ -10,7 +10,7 @@ struct node{
 int main(){
   printf("Printing Empty List:\n[  ]");
   //print adding stuff
-  struct node * start = insert_front(malloc(sizeof(struct node)), 9);
+  struct node* start = insert_front(NULL, 9);
   int i;
   for (i = 8; i > 0; i--){
     start = insert_front(start, i);
