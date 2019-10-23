@@ -11,5 +11,12 @@ int main(){
   printf("Printing Empty List:\n[  ]");
   //print adding stuff
   struct node * start = insert_front(malloc(sizeof(struct node)), 9);
-  start = insert_front(start, 8);
-  
+  int i;
+  for (i = 8; i > 0; i--){
+    start = insert_front(start, i);
+  }
+  print_list(start);
+  printf("Freeing Values...");
+  free_list(start);
+  return 0;
+}
