@@ -10,6 +10,7 @@ void print_list(struct node* node){
   printf("Printing List:\n[ ");
   while(node->next != NULL){
     printf("%d ", node->i);
+    node = node->next;
   }
   printf("]\n");
 }
