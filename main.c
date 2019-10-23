@@ -8,5 +8,8 @@ struct node{
 }
 
 int main(){
-  printf("Printing Empty List:\n");
-  //struct node * start = insert_front(malloc(12), 
+  printf("Printing Empty List:\n[  ]");
+  //print adding stuff
+  struct node * start = insert_front(malloc(sizeof(struct node)), 9);
+  start = insert_front(start, 8);
+  
