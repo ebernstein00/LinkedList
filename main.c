@@ -16,7 +16,8 @@ int main(){
     start = insert_front(start, i);
   }
   print_list(start);
-  printf("Freeing Values...");
+  printf("Freeing Values...\n");
   free_list(start);
+  print_list(start);
   return 0;
 }
