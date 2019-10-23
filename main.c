@@ -7,7 +7,7 @@ struct node{
   struct node * next;
 };
 
-int main(){
+void main(){
   printf("Printing Empty List:\n[  ]");
   //print adding stuff
   struct node * start = insert_front(malloc(sizeof(struct node)), 9);
@@ -18,5 +18,5 @@ int main(){
   print_list(start);
   printf("Freeing Values...");
   free_list(start);
-  return 0;
+  //return 0;
 }
