@@ -5,7 +5,7 @@
 struct node{
   int i;
   struct node * next;
-}
+};
 
 int main(){
   printf("Printing Empty List:\n[  ]");
