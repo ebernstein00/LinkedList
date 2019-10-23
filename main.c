@@ -18,5 +18,5 @@ int main(){
   print_list(start);
   printf("Freeing Values...");
   free_list(start);
-  //return 0;
+  return 0;
 }
