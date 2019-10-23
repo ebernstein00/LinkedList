@@ -25,12 +25,12 @@ struct node* insert_front(struct node* node, int x){
 
 struct node* free_list(struct node* node){
   struct node* ph = node->next;
-  while (ph != NULL){
+  /*while (ph != NULL){
     free(node);
     ph = ph->next;
   }
-  return ph;
-  /*free(node);
-  free_list(ph);
   return ph;*/
+  free(node);
+  free_list(ph);
+  return ph;
 }
