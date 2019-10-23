@@ -8,9 +8,8 @@ struct node{
 };
 
 int main(){
-  printf("Printing Empty List:\n[  ]\n");
-  //print_list(NULL);
-  //print adding stuff
+  printf("Printing Empty List:\n");
+  print_list(NULL);
   struct node* start = insert_front(NULL, 9);
   int i;
   for (i = 8; i >= 0; i--){
