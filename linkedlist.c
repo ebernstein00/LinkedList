@@ -24,13 +24,14 @@ struct node* insert_front(struct node* node, int x){
 }
 
 struct node* free_list(struct node* node){
-  struct node* ph = node->next;
-  /*while (ph != NULL){
+  struct node* ph;
+  while (ph != NULL){
+    ph = node->next;
     free(node);
-    ph = ph->next;
+    node = ph;
   }
-  return ph;*/
-  free(node);
-  free_list(ph);
   return ph;
+  /*free(node);
+  free_list(ph);
+  return ph;*/
 }
