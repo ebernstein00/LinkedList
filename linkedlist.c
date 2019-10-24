@@ -39,3 +39,17 @@ struct node* free_list(struct node* node){
   free_list(ph);
   return ph;*/
 }
+
+struct node* remove(struct node* front, int data){
+  struct node* leader = front->next;
+  struct node* follower = front;
+  while (leader != null){
+    if (leader->i == data){
+      follower->next = leader->next;
+      free(leader);
+    }
+    follower = leader;
+    leader = leader->next;
+  }
+  return front;
+} 
