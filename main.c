@@ -10,11 +10,13 @@ struct node{
 int main(){
   printf("Printing Empty List:\n");
   print_list(NULL);
-  struct node* start = insert_front(NULL, 9);
+  printf("Adding Nodes 0-9...\n")
+  struct node* start = insert_front(NULL, NULL);
   int i;
-  for (i = 8; i >= 0; i--){
+  for (i = 9; i >= 0; i--){
     start = insert_front(start, i);
   }
+  printf("Printing List:\n");
   print_list(start);
   printf("Freeing Value 4...\n");
   remove_node(start, 4);
