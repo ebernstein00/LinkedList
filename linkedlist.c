@@ -11,7 +11,7 @@ void print_list(struct node* node){
     printf("[  ]\n");
     return;
   }
-  printf("Printing List:\n[ ");
+  printf("\n[ ");
   while(node->next != NULL){
     printf("%d ", node->i);
     node = node->next;
