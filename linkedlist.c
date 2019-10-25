@@ -40,7 +40,7 @@ struct node* free_list(struct node* node){
   return ph;*/
 }
 
-struct node* remove(struct node* front, int data){
+struct node* remove_node(struct node* front, int data){
   struct node* leader = front->next;
   struct node* follower = front;
   while (leader != null){
