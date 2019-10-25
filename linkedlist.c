@@ -47,6 +47,7 @@ struct node* remove(struct node* front, int data){
     if (leader->i == data){
       follower->next = leader->next;
       free(leader);
+      return front;
     }
     follower = leader;
     leader = leader->next;
