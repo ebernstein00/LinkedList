@@ -17,9 +17,9 @@ int main(){
   }
   print_list(start);
   printf("Freeing Value 4...\n");
-  remove(start, 4);
+  remove_node(start, 4);
   printf("Freeing Value 5...\n");
-  remove(start, 5);
+  remove_node(start, 5);
   printf("Printing List:\n");
   print_list(start);
   printf("Freeing Remaining Values...\n");
