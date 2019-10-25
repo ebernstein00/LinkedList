@@ -16,8 +16,15 @@ int main(){
     start = insert_front(start, i);
   }
   print_list(start);
-  printf("Freeing Values...\n");
+  printf("Freeing Value 4...\n");
+  remove(start, 4);
+  printf("Freeing Value 5...\n");
+  remove(start, 5);
+  printf("Printing List:\n");
+  print_list(start);
+  printf("Freeing Remaining Values...\n");
   start = free_list(start);
+  printf("Printing List:\n");
   print_list(start);
   return 0;
 }
