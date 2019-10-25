@@ -10,8 +10,8 @@ struct node{
 int main(){
   printf("Printing Empty List:\n");
   print_list(NULL);
-  printf("Adding Nodes 0-9...\n")
-  struct node* start = insert_front(NULL, 0);
+  printf("Adding Nodes 0-9...\n");
+  struct node* start = insert_front(NULL, NULL);
   int i;
   for (i = 9; i >= 0; i--){
     start = insert_front(start, i);
